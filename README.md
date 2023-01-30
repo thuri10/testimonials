@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Testimonials](https://github.com/testimonials)
+- Solution URL: [Testimonials](https://github.com/thuri10/testimonials)
 - Live Site URL: [Testimonials](https://thuri10.github.io/testimonials)
 
 ## My process
