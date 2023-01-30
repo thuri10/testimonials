@@ -10,6 +10,7 @@ html {
     padding: 0;
 }
 
+/* Default styles */
 :root {
     --primaryModerateViolet: hsl(263, 55%, 52%);
     --primaryDarkGrayishBlue: hsl(217, 19%, 35%);
@@ -31,29 +32,28 @@ img {
     max-width: 100%;
 }
 
-
 .container {
     max-width: 1440px;
     width: 90%;
     margin: 0 auto;
-    height: 100vh;
     display: flex;
+    height: 100vh;
     justify-content: center;
     align-items: center;
 }
 
-/* card styles */
+/* card section styles */
 
 .cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2.5rem;
+    margin-top: 50px;
 }
 
 .card {
-    padding: 2.5rem;
+    padding: 1rem 2.5rem;
     border-radius: 8px;
-
 }
 
 .card-image {
@@ -76,7 +76,7 @@ img {
 .profile-subheading {
     font-weight: 600;
     color: var(--primaryWhite);
-    padding: 1.5rem 0;
+    padding: 0.5rem 0 1rem;
     font-size: 1.6rem;
 }
 
@@ -84,27 +84,34 @@ img {
     color: var(--neutralLightGray);
 }
 
-/* Single Cards Grid Layout */
+/* Single Cards Grid Layout styles */
 
 .card-one {
     grid-column: 1/3;
     grid: 1/2;
     background-color: var(--primaryModerateViolet);
+    background-image: url(../images/bg-pattern-quotation.svg);
+        background-repeat: no-repeat;
+        background-position: 80% 0%;
 }
 
+.card-one .profile-name {
+    color: var(--primaryWhite);
+}
 .card-two {
     grid-column: 3/4;
     grid-row: 1/2;
     background-color: var(--primaryDarkGrayishBlue);
+}
 
-
+.card-two .profile-name {
+    color: var(--primaryWhite);
 }
 
 .card-three {
     grid-column: 1/2;
     grid-row: 2/3;
     background-color: var(--primaryWhite);
-
 }
 
 .card-three .profile-subheading {
@@ -117,13 +124,60 @@ img {
     background-color: var(--primaryDarkBlackishBlue);
 }
 
+.card-four .profile-name {
+    color: var(--primaryWhite);
+}
 .card-five {
     grid-column: 4/5;
     grid-row: 1/3;
     background-color: var(--primaryWhite);
-
 }
 
 .card-five .profile-subheading {
     color: var(--primaryDarkBlackishBlue);
+}
+/* Media Queries for responsiveness */
+
+@media (max-width: 1300px) {
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card-five {
+        grid-column: 1/4;
+        grid-row: 3/4;
+    }
+
+    .container {
+        height: fit-content;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .card-one {
+        grid-column: 1/4;
+        grid-row: 1/2;
+    }
+
+    .card-two {
+        grid-row: 2/3;
+        grid-column: 1/4;
+    }
+
+    .card-three {
+        grid-row: 4/5;
+        grid-column: 1/4;
+    }
+
+    .card-four {
+        grid-row: 5/6;
+        grid-column: 1/4;
+    }
+
+    .card-five {
+        grid-row: 6/7;
+    }
+
+
 }
